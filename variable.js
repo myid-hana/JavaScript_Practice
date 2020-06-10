@@ -77,4 +77,19 @@ const gSymbol1 = Symbol.for('id');
 const gSymbol2 = Symbol.for('id');
 console.log(gSymbol1 === gSymbol2); //true. Symbol.for을 이용하면 동일한 symbol을 만들 수 있다.
 console.log(`value: ${symbol1}, type: ${typeof symbol1}`); //error. symbol은 바로 출력하면 에러가 발생한다.
-console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);  //.description을 이용해서 string으로 출력해줘야 한다. 
+console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);  //.description을 이용해서 string으로 출력해줘야 한다.
+
+
+//5. Dynamic typing: dynamically typed language
+//자바스크립트는 변수 선언 시에 어떤 타입인지 선언하지 않고 런타임에 할당된 값에 따라서 타입이 변경될 수 있다는 것을 의미한다. - 에러를 많이 발생시킨다.
+let text = 'hello';
+console.log(`value: ${text}, type: ${typeof text}`); //value: hello, type: string
+text = 1;
+console.log(`value: ${text}, type: ${typeof text}`); //value: 1, type: number
+text = '7' + 5; //string과 number을 더하면?
+console.log(`value: ${text}, type: ${typeof text}`); //value: 75, type: string
+//number을 string으로 변환한 뒤 string끼리 더한 결과를 출력한다.
+text = '8' / '2'; //string과 string을 나누면?
+console.log(`value: ${text}, type: ${typeof text}`); //value: 4, type: number
+//string을 number로 변환한 뒤 계산한 결과를 출력한다.
+//typescript를 이러한 javascript의 에러를 줄이기 위해 만들어진 javascript에 type이 더해져 만들어진 언어이다. 
