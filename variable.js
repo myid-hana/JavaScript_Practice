@@ -45,3 +45,13 @@ console.log(`value: ${size}, type: ${typeof size}`);
 const infinity = 1/0;
 const negativeInfinity = -1/0;
 const nAn = 'not a number'/2;
+
+//string 자바스크립트에서는 한 글자든 여러글자든 모두 string으로 취급
+const char = 'c';
+const brendan = 'brendan';
+const greeting = 'hello ' + brendan; //string과 변수가 함께 출력도 가능.
+const helloBob = `hi ${brendan}!`;
+//template literals(string): 변수의 값이 자동으로 적용되어 출력됨.
+console.log(`value: ${helloBob}, type: ${typeof helloBob}`);  //출력값: value: hi brendan!, type: string
+console.log('value: ' + helloBob + ' type: ' + typeof helloBob);
+//template literals를 쓰면 복잡하게 플러스로 string과 변수를 연결하던 것들을 간편하게 쓸 수 있다.
