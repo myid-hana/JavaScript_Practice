@@ -32,4 +32,12 @@ console.log(null === undefined); //false
 const name = 'hana';
 console.log(name === 'hana'? 'yes':'no');
 //주로 간단한 함수에서 쓴다. 복잡할 때는 if를 쓴다.
-//if else를 반복해서 쓸 때는 switch를 쓰는 것이 좋다. 
+//if else를 반복해서 쓸 때는 switch를 쓰는 것이 좋다.
+
+
+//do while loop, do 실행문을 먼저 실행한 뒤에 조건문을 검사한다.
+let i = 3;
+do {
+  console.log(`do while: ${i}`);
+  i--;
+} while (i > 0);
