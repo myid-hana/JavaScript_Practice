@@ -3,7 +3,7 @@
 //Use this for Vanilla JavaScript
 'use strict';
 
-//2. Variable
+//2. Variable , rw(read/write):메모리에 읽고 쓰는 것이 가능.
 //let (added in ES6)
 
 let globalName = 'global name';
@@ -25,14 +25,16 @@ console.log(name); //블럭 박에서는 hana를 출력할 수 없음. 아무값
 //var에는 block scope가 적용되지 않는다. 아무리 블럭 안에 안에 안에 변수를 선언해도 어디서나 변수를 사용할 수 있게 된다.
 
 
-//3. constant
+//3. constant, read only: 메모리에서 읽는 것만 가능.
 //한번 할당되면 절대 값이 바뀌지 않는 변수. immutable data type
 //할당된 메모리를 가리키고 있는 포인터가 잠겨있어서 변수가 선언될 때 할당된 값을 변경할 수 없다.
 //1. 보안상의 이유로 2. 여러 thread들이 동시에 값을 변경하려고 할 때 안전하게 하기 위해 3. 실수 방지를 위해 사용한다.
 
 //4. variable types
 //(1)primitive, single item: 더이상 나눠질 수 없는 가장 작은 아이템. number, string, boolean, null, undefined, symbol 등이 있다.
+//값 자체가 메모리에 저장된다.
 //(2)object, box container: single item들을 여러개 묶어서 한 단위 혹은 박스 형태로 관리할 수 있게 해주는 것.
+//object를 가리키는 reference가 메모리에 저장된다.
 //(3)function: 자바스크립트는 first-class function이 지원되며, 함수가 변수에 할당이 가능하고 함수에 parameter로도 전달이 되고 함수의 return 타입으로도 함수를 return 하는 것이 가능하다.
 
 const count = 17; //integer 정수
@@ -92,4 +94,4 @@ console.log(`value: ${text}, type: ${typeof text}`); //value: 75, type: string
 text = '8' / '2'; //string과 string을 나누면?
 console.log(`value: ${text}, type: ${typeof text}`); //value: 4, type: number
 //string을 number로 변환한 뒤 계산한 결과를 출력한다.
-//typescript를 이러한 javascript의 에러를 줄이기 위해 만들어진 javascript에 type이 더해져 만들어진 언어이다. 
+//typescript를 이러한 javascript의 에러를 줄이기 위해 만들어진 javascript에 type이 더해져 만들어진 언어이다.
