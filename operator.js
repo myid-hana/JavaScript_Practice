@@ -24,3 +24,12 @@ console.log('' == false); //true
 console.log('' === false); //false
 console.log(null == undefined); //true
 console.log(null === undefined); //false
+
+
+//Conditional operators: if
+//Ternary operator: ?
+//condition ? value1 : value2;
+const name = 'hana';
+console.log(name === 'hana'? 'yes':'no');
+//주로 간단한 함수에서 쓴다. 복잡할 때는 if를 쓴다.
+//if else를 반복해서 쓸 때는 switch를 쓰는 것이 좋다. 
