@@ -41,3 +41,20 @@ do {
   console.log(`do while: ${i}`);
   i--;
 } while (i > 0);
+
+//Q1. iterate from 0 to 10 and print only even numbers(use continue)
+for (let j = 0; j < 11; j++) {
+  if (j % 2 !== 0) {
+    continue;
+  }
+  console.log(j);
+}
+
+
+//Q2. iterate from 0 to 10 and print numbers until reaching 8 (use break)
+for (let j = 0; j < 11; j++) {
+  if (j > 8) {
+    break;
+  }
+  console.log(j);
+}
