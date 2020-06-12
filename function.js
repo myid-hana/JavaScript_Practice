@@ -33,3 +33,30 @@ function printAll(...args) {
 }
 
 printAll('dream', 'coding', 'hana');
+
+
+//4. Return a value
+function sum(a, b) {
+  return a + b;
+}
+const result = sum(1, 2); //3
+console.log(`sum: ${sum(1, 2)}`);
+//값을 반환할 때 return을 쓰는데 return을 쓰지 않은 함수는 return undefined가 써있는 것과 같다.
+
+//5. Early return, early exit
+//복잡한 조건문을 쓰게 될 때 가독성이 떨어지기 때문에 if나 else를 반복해서 쓰는 것 보다는 조건에 맞지 않으면 빨리 return해서 다음으로 넘어가게 하는 것이 가독성이 좋다.
+
+//bad
+function upgradeUser(user) {
+  if (user.point > 10) {
+    //long upgrade logic...
+  }
+}
+
+//good
+function upgradeUser(user) {
+  if (user.point <= 10) {
+    return;
+  }
+  //long upgrade logic...
+}
