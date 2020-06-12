@@ -95,4 +95,34 @@ randomQuiz('love you', printYes, printNo);
 //항상 anonymous function이다.
 const simplePrint = () => console.log('simplePrint');
 const add = (a, b) => a + b;
-//
+
+
+//Quiz
+//function caculate(command, a, b)
+//command: add, substract, divide, multifly, remainder
+function caculate(command, a, b){
+  let sum;
+  switch (command) {
+    case 'add':
+      sum = a + b;
+      break;
+    case 'substract':
+      sum = a - b;
+      break;
+    case 'divide':
+      sum = a / b;
+      break;
+    case 'multifly':
+      sum = a * b;
+      break;
+    case 'remainder':
+      sum = a % b;
+      break;
+  }
+  return sum;
+}
+console.log(caculate('add', 1, 3));
+console.log(caculate('substract', 1, 3));
+console.log(caculate('divide', 3, 3));
+console.log(caculate('multifly', 3, 3));
+console.log(caculate('remainder', 3, 3));
