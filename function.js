@@ -16,3 +16,20 @@ function showMessage(message, from = 'unknown') {
   console.log(`${message} by ${from}`);
 }
 showMessage('Hi!');
+
+
+//3. Rest parameters (added in ES6)
+//parameter값 앞에 ...을 쓰면 배열로 parameter을 받을 수 있다.
+function printAll(...args) {
+  for (let i = 0; i < args.length; i++) {
+    console.log(args[i]);
+  }
+
+  for (const arg of args) {  //위와 같은 내용 , 더 간단한 표현
+    console.log(arg);
+  }
+
+  args.forEach((arg) => console.log(arg));
+}
+
+printAll('dream', 'coding', 'hana');
