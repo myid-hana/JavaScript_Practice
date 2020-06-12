@@ -60,3 +60,11 @@ function upgradeUser(user) {
   }
   //long upgrade logic...
 }
+
+
+//6. function expression
+const print = function () { //함수에 이름을 정하지 않고 바로 변수에 할당하는 것을 anonymous function이라고 한다.
+  console.log('print');
+}
+//이름이 있는 함수는 named function
+//function declation은 function hoisting이 가능하다. 
