@@ -66,5 +66,26 @@ function upgradeUser(user) {
 const print = function () { //함수에 이름을 정하지 않고 바로 변수에 할당하는 것을 anonymous function이라고 한다.
   console.log('print');
 }
-//이름이 있는 함수는 named function
-//function declation은 function hoisting이 가능하다. 
+//이름이 있는 함수는 named function, 디버깅할 때 함수 이름이 나오게 하기 위해 이름을 지정한다. 
+//function declation function hoisting이 가능하다.
+
+
+//7. Callback function
+//조건에 따라 부르는 함수가 다르다.
+function randomQuiz(answer, printYes, printNo) {
+  if (answer === 'love you') {
+    printYes();  //answer가 loveyou면 printYes함수를 호출하고
+  } else {
+    printNo(); //그렇지 않으면 printNo함수를 호출한다.
+  }
+}
+
+const printYes = function () {
+  console.log('yes');
+};
+
+const printNo = function print() {
+  console.log('no');
+};
+randomQuiz('wrong', printYes, printNo);
+randomQuiz('love you', printYes, printNo);
