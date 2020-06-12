@@ -66,7 +66,7 @@ function upgradeUser(user) {
 const print = function () { //함수에 이름을 정하지 않고 바로 변수에 할당하는 것을 anonymous function이라고 한다.
   console.log('print');
 }
-//이름이 있는 함수는 named function, 디버깅할 때 함수 이름이 나오게 하기 위해 이름을 지정한다. 
+//이름이 있는 함수는 named function, 디버깅할 때 함수 이름이 나오게 하기 위해 이름을 지정한다.
 //function declation function hoisting이 가능하다.
 
 
@@ -89,3 +89,10 @@ const printNo = function print() {
 };
 randomQuiz('wrong', printYes, printNo);
 randomQuiz('love you', printYes, printNo);
+
+
+//8. Arrow function
+//항상 anonymous function이다.
+const simplePrint = () => console.log('simplePrint');
+const add = (a, b) => a + b;
+//
