@@ -47,3 +47,38 @@ class User {
 
 const user1 = new User('hana', 'job', -1);
 console.log(user1.age);
+
+
+//3. 상속과 다양성
+//a way for one class to extend another class.
+class Shape{
+  constructor(width, height, color) {
+    this.width = width;
+    this.height = height;
+    this.color = color;
+  }
+
+  draw() {
+    console.log(`drawing ${this.color} color of`)
+  }
+
+  getArea() {
+    return thid.width * this.height;
+  }
+}
+
+class Rectangle extends Shape {} //extends를 이용하면 클래스에 정의해준 것을 상속받아 쓸 수 있다.
+//공통된 속성을 일일이 작성하지 않아도 된다.
+class Triangle extends Shape{
+  draw() {
+    super.draw(); //overriding한 것과 함께 부모 클래스에 있던 함수도 같이 호출하고 싶다면 super을 이용한다. 
+    console.log('boom!');
+  }
+  getArea() {
+    return (this.width * this.height) / 2; //overriding: 상속받은 것들 중 필요한 부분만 수정해서 사용가능.
+  }
+}
+const rectangle = new Rectangle(20, 20, 'blue');
+const triangle = new Triangle(20, 20, 'red');
+rectangle.draw(); //drawing blue color of
+console.log(triangle.getArea());  //200
