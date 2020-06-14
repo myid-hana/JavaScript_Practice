@@ -71,7 +71,7 @@ class Rectangle extends Shape {} //extends를 이용하면 클래스에 정의�
 //공통된 속성을 일일이 작성하지 않아도 된다.
 class Triangle extends Shape{
   draw() {
-    super.draw(); //overriding한 것과 함께 부모 클래스에 있던 함수도 같이 호출하고 싶다면 super을 이용한다. 
+    super.draw(); //overriding한 것과 함께 부모 클래스에 있던 함수도 같이 호출하고 싶다면 super을 이용한다.
     console.log('boom!');
   }
   getArea() {
@@ -82,3 +82,12 @@ const rectangle = new Rectangle(20, 20, 'blue');
 const triangle = new Triangle(20, 20, 'red');
 rectangle.draw(); //drawing blue color of
 console.log(triangle.getArea());  //200
+
+
+//4. instanceOf
+//object가 해당 class로 만들어진 object가 맞는지 판별하는 함수. true나 false를 반환한다.
+console.log(rectangle instanceof Rectangle); //t
+console.log(triangle instanceof Rectangle); //f
+console.log(triangle instanceof Triangle); //t
+console.log(triangle instanceof Shape); //t
+console.log(triangle instanceof Object); //t 자바스크립트에서 만든 모든 object는 자바스크립트의 object를 상속한다. 
